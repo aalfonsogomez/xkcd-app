@@ -1,16 +1,16 @@
-import { Text } from "@nextui-org/react";
+import { Container, Text } from "@nextui-org/react";
 import Link from "next/link";
 
 export function Header() {
-    return <header>
+    return <header className="flex justify-between items-center p-4">
         <div>
-            <Text small>next<Text>xkcd</Text></Text>
+            <h1 className='font-bold'>next<span className='font-light'>xkcd</span></h1>
         </div>
         <nav>
-            <ul>
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/">About</Link></li>
-                <li><Link href="/">Search</Link></li>
+            <ul className="flex flex-row gap-2">
+                <li><Link href="/"><span className='text-sm font-bold'>Home</span></Link></li>
+                <li><Link href="/about"><span className='text-sm font-bold'>About</span></Link></li>
+                <li><Link href="/search"><span className='text-sm font-bold'>Search</span></Link></li>
             </ul>
         </nav>
     </header>
