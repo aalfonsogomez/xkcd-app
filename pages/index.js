@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+
+import { Footer } from 'components/Footer'
 import { Header } from 'components/Header'
-import fs from 'fs'
+
+import fs from 'node:fs'
 
 export default function Home({ latestComics }) {
     return (
-        <div>
+        <>
             <Head>
                 <title>xkcd - Comics for developers</title>
                 <meta name="description" content="Comics for developers" />
@@ -37,7 +40,8 @@ export default function Home({ latestComics }) {
 
                 </section>
             </main>
-        </div>
+            <Footer />
+        </>
     )
 }
 
