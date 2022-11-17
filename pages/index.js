@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Header } from '../components/Header'
 import fs from 'fs'
+import { COMPILER_INDEXES } from 'next/dist/shared/lib/constants'
 
 export default function Home({ latestComics }) {
     return (
@@ -26,10 +27,8 @@ export default function Home({ latestComics }) {
                                         {comic.title}
                                     </h3>
                                     <Image
-                                        width='300'
-                                        height='300'
-                                        layout='intrinsic'
-                                        objectFit='contain'
+                                        width={comic.width}
+                                        height={comic.height}
                                         src={comic.img}
                                         alt={comic.alt} />
                                 </div>
